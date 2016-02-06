@@ -1,0 +1,34 @@
+---
+title: Welcome to Middleman
+---
+
+%section.hero{style: "background-image: url(/images/photo1.jpg)"}
+  .hero__overlay
+    .container
+      %img.hero__logo{src: "/images/westfield.png", width: '400px', height: '129px'}
+      %h1.hero__title Awkward Family Photos
+
+%section.section
+  .container
+    %h1 SHARE TO WIN
+    %p Upload your Awkward Family Photo to Instagram for a chance to win a $500 Westfield Gift Card.
+    %p Simply tag @westfieldcarindale and #‎thisischristmas (and make sure your account is set to public. T&C's apply).
+
+%section.section
+  .container
+    %ul.photos
+      - 15.times do |num|
+        %li.photo
+          %img.photo__img{src: "/images/photo#{num}.jpg"}
+          %a.photo__download{href: "/"}
+
+%footer.footer
+  .container
+    %p.footer__leadon Powered by
+    %img.footer__logo{src: "/images/logo.svg", width: '346px', height: '193px'}
+  .footer__content
+    .footer__details
+      %p Brisbane, Sydney, Melbourne, Canberra, Byron Bay, London, Manchester, Birmingham.
+    .footer__details
+      %a{href: "/"} info@photobooth.co
+      %a{href: "/"} 0203 417 7173
