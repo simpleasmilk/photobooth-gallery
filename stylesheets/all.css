@@ -664,13 +664,13 @@ input[type="submit"] {
     position: relative;
     z-index: 90; }
   /* line 78, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
-  .frame .image:after {
+  .frame .download {
     content: '';
     display: block;
     margin: auto;
     width: 8em;
     height: 8em;
-    background-image: url(/images/download.png);
+    background-image: url(http://photobooth-gallery.simpleasmilk.com/images/download.png);
     background-size: cover;
     margin-top: -4em;
     position: relative;
@@ -690,6 +690,7 @@ input[type="submit"] {
   /* line 104, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
   .footer__logo {
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     height: auto;
-    opacity: 0.3; }
+    opacity: 0.3;
+    margin-bottom: 30px; }

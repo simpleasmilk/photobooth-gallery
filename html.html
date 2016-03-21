@@ -7,43 +7,55 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Welcome to Middleman</title>
+    <title>[[TITLE]]</title>
+    <meta name="description" content="[[DESCRIPTION]]"/>
+  	<meta property="og:image" content="[[BACKGROUNDIMAGE]]" />
+  	<meta property="og:url" content="[[OG_URL]]" />
+  	<meta property="og:title" content="[[OG_TITLE]]" />
 
-    <link href="/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <!--<link href="/stylesheets/all.css" rel="stylesheet" type="text/css" />-->
+    <link href="http://photobooth-gallery.simpleasmilk.com/stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://login.photopartyupload.com/content/styles/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://login.photopartyupload.com/scripts/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="scripts/jwplayer.js"></script>
     <script src="/javascripts/all.js" type="text/javascript"></script>
   </head>
 
   <body class="demo">
-    <section class="hero" style="background-image: url(/images/photo1.jpg)">
+    <section class="hero" style="background-image: url([[BACKGROUNDIMAGE]])">
   <div class="hero__overlay">
     <div class="container">
-      <img class="hero__logo" height="129px" src="/images/westfield.png" width="400px" />
-      <h1 class="hero__title">Awkward Family Photos</h1>
+      <img class="hero__logo" height="129px" src="[[OG_IMAGE]]" width="400px" />
+      <h1 class="hero__title">[[TITLE]]</h1>
     </div>
   </div>
 </section>
 <section class="section">
   <div class="container">
-    <h1>SHARE TO WIN</h1>
-    <p>Upload your Awkward Family Photo to Instagram for a chance to win a $500 Westfield Gift Card.</p>
-    <p>Simply tag @westfieldcarindale and #‎thisischristmas (and make sure your account is set to public. T&amp;C's apply).</p>
+    [[HEADER]]
   </div>
 </section>
 <section class="section">
   <div class="container">
     <div class="photos">
+
+      <!--
       <div class="frame">
         <a class="image fancybox" href="/">
           <img src="/images/photo1.jpg" />
         </a>
       </div>
+      -->
+
+      [[IMAGE_GALLERY]]
     </div>
   </div>
 </section>
 <footer class="footer">
   <div class="container">
     <p class="footer__leadon">Powered by</p>
-    <img class="footer__logo" height="193px" src="/images/logo.svg" width="346px" />
+    <img class="footer__logo" height="193px" src="http://photobooth-gallery.simpleasmilk.com/images/logo.svg" width="346px" />
   </div>
   <div class="footer__content">
     <div class="footer__details">
@@ -56,5 +68,13 @@
   </div>
 </footer>
 
+  <script>
+  $(function() {
+    $('.image img').after('<div class="download"></div>');
+  });
+  </script>
+
+
+  [[GOOGLEANALYTICS_TRACKER_ID]]
   </body>
 </html>
