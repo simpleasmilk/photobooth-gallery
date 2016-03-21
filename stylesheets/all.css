@@ -648,38 +648,46 @@ input[type="submit"] {
     padding-top: 0; }
 
 /* line 59, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
-.photo {
+.frame {
   position: relative;
   margin-bottom: 2em; }
   /* line 63, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
-  .photo:last-child {
-    margin-bottom: 0; }
+  .frame .image {
+    position: relative; }
   /* line 67, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
-  .photo__img {
+  .frame:last-child {
+    margin-bottom: 0; }
+  /* line 71, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
+  .frame img {
     width: 100%;
-    height: auto; }
-  /* line 72, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
-  .photo__download {
+    height: auto;
+    position: relative;
+    z-index: 90; }
+  /* line 78, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
+  .frame .image:after {
+    content: '';
+    display: block;
+    margin: auto;
     width: 8em;
     height: 8em;
-    border-radius: 100%;
-    border: 1em solid white;
-    background-color: #F12324;
-    display: inline-block;
-    margin-top: -4em; }
+    background-image: url(/images/download.png);
+    background-size: cover;
+    margin-top: -4em;
+    position: relative;
+    z-index: 120; }
 
-/* line 83, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
+/* line 92, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
 .footer {
   background-color: #272626;
   padding: 120px 0 80px;
   text-align: center;
   color: #939292; }
-  /* line 89, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
+  /* line 98, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
   .footer__leadon {
     text-transform: uppercase;
     display: block;
     margin-bottom: 2em; }
-  /* line 95, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
+  /* line 104, /Users/james/code/photobooth-gallery/source/stylesheets/all.scss */
   .footer__logo {
     width: 100%;
     max-width: 350px;
